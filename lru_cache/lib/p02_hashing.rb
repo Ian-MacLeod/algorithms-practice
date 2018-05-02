@@ -6,7 +6,7 @@ class Array
   def hash
     hash = 0
     each_with_index do |el, idx|
-      hash ^= el.hash * idx
+      hash ^= el.hash * (idx + 1)
     end
     hash
   end
